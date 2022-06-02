@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingVertical: 40,
-    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: theme.colors.white,
     width: '100%'
@@ -48,9 +47,9 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 5
   },
   title: {
-    color: theme.colors.secondary100,
-    textAlign: 'center',
-    fontSize: 25,
+    color: theme.colors.text,
+    textAlign: 'left',
+    fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 5,
     fontFamily: theme.fonts.title700,
@@ -67,7 +66,7 @@ export const styles = StyleSheet.create({
   subtitle: {
     color: theme.colors.text,
     fontSize: 15,
-    textAlign: 'center',
+    textAlign: 'left',
     marginBottom: 64,
     fontFamily: theme.fonts.title500,
     lineHeight: 25

@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingVertical: 40,
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     backgroundColor: theme.colors.white,
     width: '100%'
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
   controlButton: {
     marginTop: 30,
     width: '100%',
-    paddingHorizontal: 35
+    paddingHorizontal: 35,
   },
   controls: {
     marginTop: 0,
@@ -49,8 +49,8 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: theme.colors.secondary100,
-    textAlign: 'center',
-    fontSize: 25,
+    textAlign: 'left',
+    fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 5,
     fontFamily: theme.fonts.title700,
@@ -58,14 +58,18 @@ export const styles = StyleSheet.create({
   },
   imageLogo: {
     marginTop: 0,
-    marginBottom: 15
+    marginBottom: 55
+  },
+  image: {
+    width: '100%',
+    height: 360,    
   },
   linha: {
     marginTop: 15,
     marginBottom: 15
   },
   subtitle: {
-    color: theme.colors.text,
+    color: theme.colors.primary,
     fontSize: 15,
     textAlign: 'center',
     marginBottom: 64,

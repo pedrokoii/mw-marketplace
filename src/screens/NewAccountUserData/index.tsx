@@ -7,14 +7,10 @@ import { theme } from '../../global/styles/theme';
 import { styles } from "./styles";
 
 import logoSmall from "../../assets/app-name-small.png";
-import linha from "../../assets/linha.png";
-import apple from "../../assets/apple.png";
-import facebook from "../../assets/facebook.png";
-import google from "../../assets/google.png";
 
 import { GradientButton } from "../../components/GradientButton";
 
-export function SignIn() {
+export function NewAccountUserData() {
 
     const navigation = useNavigation<any>();
 
@@ -28,15 +24,16 @@ export function SignIn() {
                 source={logoSmall}
                 resizeMode="contain"
             />
-
+            
             <View style={styles.content}>
                 <Text style={styles.title}>
-                    Bem Vindos de Volta {'\n'}
-                    Sentimos sua Falta {'\n'}
+                    Insira os dados da sua conta
                 </Text>
-
+            </View>
+            
+            <View style={styles.content}>
                 <Text style={styles.label}>
-                    E-mail
+                    E-mail *
                 </Text>
                 <TextInput style={styles.input}
                     placeholder="Insira seu e-mail"
@@ -47,52 +44,45 @@ export function SignIn() {
                 </TextInput>
 
                 <Text style={styles.label}>
-                    Senha
+                    Nome de usuário *
                 </Text>
                 <TextInput style={styles.input}
-                    keyboardType='number-pad'
-                    placeholder="Insira sua senha"
-                    maxLength={6}
-                    secureTextEntry
+                    placeholder="Insira seu nome de usuário"
+                    keyboardType="default"
                     placeholderTextColor={theme.colors.primary}
+                    maxLength={20}
                 >
                 </TextInput>
 
-                <View style={styles.controls}>
-                    <Text style={styles.label}
-                        onPress={() => handleNavigate('NewAccountUserData')}
-                    >
-                        Novo por aqui
-                    </Text>
+                <Text style={styles.label}>
+                    Senha *
+                </Text>
+                <TextInput style={styles.input}
+                    secureTextEntry
+                    placeholder="Insira sua senha"
+                    keyboardType='number-pad'
+                    placeholderTextColor={theme.colors.primary}
+                    maxLength={6}
+                >
+                </TextInput>
 
-                    <Text style={styles.label}
-                        onPress={() => handleNavigate('PasswordRecovery')}
-                    >
-                        Esqueci minha senha
-                    </Text>
-                </View>
+                <Text style={styles.label}>
+                    Confirme a senha *
+                </Text>
+                <TextInput style={styles.input}
+                    secureTextEntry
+                    placeholder="Insira sua senha"
+                    keyboardType='number-pad'
+                    placeholderTextColor={theme.colors.primary}
+                    maxLength={6}
+                >
+                </TextInput>
             </View>
 
             <View style={styles.controlButton}>
                 <GradientButton
                     title="Continuar"
-                    onPress={() => handleNavigate('Start')}
-                />
-            </View>
-
-            <Image style={styles.linha}
-                source={linha}
-            />
-
-            <View style={styles.controls}>
-                <Image style={styles.linha}
-                    source={google}
-                />
-                <Image style={styles.linha}
-                    source={facebook}
-                />
-                <Image style={styles.linha}
-                    source={apple}
+                    onPress={() => handleNavigate('NewAccountPersonalData')}
                 />
             </View>
         </View>

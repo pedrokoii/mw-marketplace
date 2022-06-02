@@ -48,9 +48,9 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 5
   },
   title: {
-    color: theme.colors.secondary100,
-    textAlign: 'center',
-    fontSize: 25,
+    color: theme.colors.text,
+    textAlign: 'left',
+    fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 5,
     fontFamily: theme.fonts.title700,

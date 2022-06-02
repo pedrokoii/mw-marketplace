@@ -7,6 +7,6 @@ export function Routes(){
   return(
     <NavigationContainer>
      <AppRoutes /> 
-     </NavigationContainer>
+    </NavigationContainer>
   )
 }

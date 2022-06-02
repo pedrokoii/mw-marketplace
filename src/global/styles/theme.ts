@@ -12,6 +12,8 @@ export const theme = {
     secondary50: '#A5FEE0',
     secondary40: '#D1FEEF',
 
+    buttonGradientColor1: '#8D2BE2',
+    buttonGradientColor2: '#4900D8',
 
     overlay: 'rgba(0,0,0,0.7)',
     highlight: '#ABB1CC',
@@ -26,7 +28,7 @@ export const theme = {
   fonts: {
     title700: 'Nunito_700Bold',
     title500: 'Nunito_400Regular',
-    text400: 'Nunito_300Light',
     text500: 'Nunito_700Bold',
+    text400: 'Nunito_300Light',
   }
 };

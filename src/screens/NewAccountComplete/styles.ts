@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
   title: {
     color: theme.colors.secondary100,
     textAlign: 'center',
-    fontSize: 25,
+    fontSize: 35,
     fontWeight: 'bold',
     marginBottom: 5,
     fontFamily: theme.fonts.title700,
@@ -58,17 +58,19 @@ export const styles = StyleSheet.create({
   },
   imageLogo: {
     marginTop: 0,
-    marginBottom: 15
+    marginBottom: 65
+  },
+  image: {
+    width: '100%',
   },
   linha: {
     marginTop: 15,
     marginBottom: 15
   },
   subtitle: {
-    color: theme.colors.text,
+    color: theme.colors.primary,
     fontSize: 15,
     textAlign: 'center',
-    marginBottom: 64,
     fontFamily: theme.fonts.title500,
     lineHeight: 25
   }

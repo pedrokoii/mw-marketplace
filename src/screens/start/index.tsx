@@ -1,48 +1,53 @@
-import { StatusBar } from "expo-status-bar";
 import { View, Text, Image } from "react-native";
+
 import { styles } from "./styles";
-import IllustrationImg from "../../assets/Ilustration.png";
+
+import IllustrationImg from "../../assets/Illustration.png";
 import logoSmall from "../../assets/LogoSmall.png";
+
 import { ButtonWhite } from "../../components/ButtonWhite";
 import { Background } from "../../components/Background";
 
-
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 
 export function Start() {
-  const navigation = useNavigation<any>();
+  
+    const navigation = useNavigation<any>();
 
-  const handleNavigate = () => {
-    navigation.navigate('SignIn');
-    // navigation.goBack();
-  }
+    const handleNavigate = (routeName: string) => {
+        navigation.navigate(routeName);
+    }
 
-  return (
-    <Background>
-      <View style={styles.container}>
-        <Image
-          source={logoSmall}
-          style={styles.imageLogo}
-          resizeMode="stretch"
-        />
-        <Text style={styles.title}>
-          Marketplace {"\n"} Inteligente para você {"\n"}
-        </Text>
-        <Image
-          source={IllustrationImg}
-          style={styles.image}
-          resizeMode="stretch"
-        />
+    return (
+        <Background>
+            <View style={styles.container}>
+                <Image style={styles.imageLogo}
+                    source={logoSmall}
+                    resizeMode="contain"
+                />
 
-        <View style={styles.content}>
-          <Text style={styles.subtitle}>
-            Sua solução para vender seus produtos {"\n"}
-          </Text>
+                <Text style={styles.title}>
+                    Marketplace {"\n"}
+                    Inteligente para você {"\n"}
+                </Text>
 
-          <ButtonWhite title="Continuar" onPress={handleNavigate} />
-        </View>
-      </View>
-    </Background>
-  );
+                <Image style={styles.image}
+                    source={IllustrationImg}
+                    resizeMode="contain"
+                />
+
+                <View style={styles.content}>
+                    <Text style={styles.subtitle}>
+                        Sua solução para vender seus produtos {"\n"}
+                    </Text>
+
+                    <ButtonWhite 
+                        title="Continuar"
+                        onPress={() => handleNavigate('SignIn')}
+                    />
+                </View>
+            </View>
+        </Background>
+    );
 }
